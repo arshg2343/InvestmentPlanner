@@ -57,7 +57,7 @@ header ul li {
 	color: white;
 	text-align: center;
 	padding: 50px 20px;
-	background-image: url("D:/Projects/Hackathon/investment-planner/src/assets/stock_bg.jpg");
+	background-image: url("./assets/stock_bg.jpg");
 }
 .hero h2 {
 	color: white;
