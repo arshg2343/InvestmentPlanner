@@ -1,12 +1,14 @@
 import React from "react";
 import "../styles.css";
+import { useNavigate } from "react-router-dom";
 
 const ContactUs = () => {
+	const navigate = useNavigate();
 	return (
 		<div>
 			<header>
 				<div className="container">
-					<h1>AI Investment Adviser</h1>
+					<h1 onClick={() => navigate("/")}>AI Investment Adviser</h1>
 					<nav>
 						<ul>
 							<li>

@@ -9,7 +9,7 @@ const Landing_page = () => {
 			{" "}
 			<header>
 				<div className="container">
-					<h1>AI Investment Adviser</h1>
+					<h1 onClick={() => navigate("/")}>AI Investment Adviser</h1>
 					<nav>
 						<ul>
 							<li>
