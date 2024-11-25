@@ -1,8 +1,18 @@
 import React from "react";
 import "../styles.css";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const ContactUs = () => {
+	const [formState, setFormState] = useState({
+		name: "",
+		email: "",
+		message: "",
+	});
+	const handleChange = (e) => {
+		const { name, value } = e.target;
+		setFormState({ ...formState, [name]: value });
+	};
 	const navigate = useNavigate();
 	return (
 		<div>
@@ -35,15 +45,31 @@ const ContactUs = () => {
 			<section className="main-content">
 				<div className="container">
 					<h2>Contact Us</h2>
-					<form className="contact-form" data-netlify="true">
+					<form
+						className="contact-form"
+						name="contact" // Netlify form name
+						method="POST" // Required for Netlify Forms
+						data-netlify="true" // Enables Netlify form handling
+						onSubmit={(e) => {
+							e.preventDefault();
+							// Additional logic (if needed)
+							e.target.submit(); // Submit the form
+						}}
+					>
 						<label for="name">Your Name:</label>
-						<input type="text" id="name" placeholder="Your Name" />
+						<input
+							type="text"
+							id="name"
+							placeholder="Your Name"
+							value={formState.name}
+						/>
 
 						<label for="email">Your Email:</label>
 						<input
 							type="email"
 							id="email"
 							placeholder="Your Email"
+							value={formState.email}
 						/>
 
 						<label for="message">Your Message:</label>
@@ -51,6 +77,7 @@ const ContactUs = () => {
 							id="message"
 							rows="5"
 							placeholder="Your Message"
+							value={formState.message}
 						></textarea>
 
 						<button type="submit">Send</button>
