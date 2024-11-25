@@ -35,7 +35,7 @@ const ContactUs = () => {
 			<section className="main-content">
 				<div className="container">
 					<h2>Contact Us</h2>
-					<form className="contact-form">
+					<form className="contact-form" netlify>
 						<label for="name">Your Name:</label>
 						<input type="text" id="name" placeholder="Your Name" />
 
