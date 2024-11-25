@@ -1,8 +1,8 @@
 import React from "react";
-import Landing_page from "./components/landing_page";
-import ContactUs from "./components/ContactUs";
-import StockAnalysis from "./components/StockAnalysis";
-import RetirementPlanner from "./components/RetirementPlanner";
+import Landing_page from "./components/Landing_page.jsx";
+import ContactUs from "./components/ContactUs.jsx";
+import StockAnalysis from "./components/StockAnalysis.jsx";
+import RetirementPlanner from "./components/RetirementPlanner.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => {
