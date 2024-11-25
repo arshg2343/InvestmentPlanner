@@ -55,6 +55,7 @@ const ContactUs = () => {
 							// Additional logic (if needed)
 							e.target.submit(); // Submit the form
 						}}
+						value="contact"
 					>
 						<label for="name">Your Name:</label>
 						<input
