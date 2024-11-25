@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles.css";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 
 const ContactUs = () => {
 	const [formState, setFormState] = useState({
@@ -9,11 +8,14 @@ const ContactUs = () => {
 		email: "",
 		message: "",
 	});
+
 	const handleChange = (e) => {
 		const { name, value } = e.target;
-		setFormState({ ...formState, [name]: value });
+		setFormState({ ...formState, [name]: value }); // Update the form state based on input's name attribute
 	};
+
 	const navigate = useNavigate();
+
 	return (
 		<div>
 			<header>
@@ -55,33 +57,41 @@ const ContactUs = () => {
 							// Additional logic (if needed)
 							e.target.submit(); // Submit the form
 						}}
-						value="contact"
 					>
-						<label for="name">Your Name:</label>
+						{/* Hidden input for Netlify */}
+						<input type="hidden" name="form-name" value="contact" />
+
+						<label htmlFor="name">Your Name:</label>
 						<input
 							type="text"
 							id="name"
+							name="name" // Add name attribute for state tracking
 							placeholder="Your Name"
 							value={formState.name}
 							onChange={handleChange}
+							required
 						/>
 
-						<label for="email">Your Email:</label>
+						<label htmlFor="email">Your Email:</label>
 						<input
 							type="email"
 							id="email"
+							name="email" // Add name attribute for state tracking
 							placeholder="Your Email"
 							value={formState.email}
 							onChange={handleChange}
+							required
 						/>
 
-						<label for="message">Your Message:</label>
+						<label htmlFor="message">Your Message:</label>
 						<textarea
 							id="message"
+							name="message" // Add name attribute for state tracking
 							rows="5"
 							placeholder="Your Message"
 							value={formState.message}
 							onChange={handleChange}
+							required
 						></textarea>
 
 						<button type="submit">Send</button>
@@ -89,13 +99,13 @@ const ContactUs = () => {
 				</div>
 			</section>
 
-			{/* <footer>
+			<footer>
 				<div className="container">
 					<p>
 						&copy; 2024 AI Investment Adviser. All rights reserved.
 					</p>
 				</div>
-			</footer> */}
+			</footer>
 		</div>
 	);
 };
