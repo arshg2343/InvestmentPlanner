@@ -62,6 +62,7 @@ const ContactUs = () => {
 							id="name"
 							placeholder="Your Name"
 							value={formState.name}
+							onChange={handleChange}
 						/>
 
 						<label for="email">Your Email:</label>
@@ -70,6 +71,7 @@ const ContactUs = () => {
 							id="email"
 							placeholder="Your Email"
 							value={formState.email}
+							onChange={handleChange}
 						/>
 
 						<label for="message">Your Message:</label>
@@ -78,6 +80,7 @@ const ContactUs = () => {
 							rows="5"
 							placeholder="Your Message"
 							value={formState.message}
+							onChange={handleChange}
 						></textarea>
 
 						<button type="submit">Send</button>
