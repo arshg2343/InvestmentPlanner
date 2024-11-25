@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Stock Analysis</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<h1>AI Investment Adviser</h1>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li>
+							<a href="stock-analysis.html" class="active"
+								>Stock Analysis</a
+							>
+						</li>
+						<li>
+							<a href="retirement-planning.html"
+								>Retirement Planning</a
+							>
+						</li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<section class="main-content">
+			<div class="container">
+				<h2>Stock Analysis</h2>
+				<form class="stock-form">
+					<label for="stock-name">Enter Stock Name or Symbol:</label>
+					<input
+						type="text"
+						id="stock-name"
+						placeholder="e.g., AAPL, TSLA"
+					/>
+					<button type="submit">Analyze</button>
+				</form>
+				<div class="stock-results">
+					<h3>Results:</h3>
+					<p><strong>Recommendation:</strong> Buy</p>
+					<p><strong>Predicted Future Price:</strong> $150.25</p>
+					<div class="graph-placeholder">[Graph Placeholder]</div>
+					<div class="news-placeholder">[News Placeholder]</div>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<div class="container">
+				<p>&copy; 2024 AI Investment Adviser. All rights reserved.</p>
+			</div>
+		</footer>
+	</body>
+</html>
