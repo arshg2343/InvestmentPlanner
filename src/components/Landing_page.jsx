@@ -13,9 +13,7 @@ const Landing_page = () => {
 					<nav>
 						<ul>
 							<li>
-								<a href="#" onClick={() => navigate("/")}>
-									Home
-								</a>
+								<a onClick={() => navigate("/")}>Home</a>
 							</li>
 							<li>
 								<a href="#features">Features</a>
@@ -24,10 +22,7 @@ const Landing_page = () => {
 								<a href="#about">About</a>
 							</li>
 							<li>
-								<a
-									href="#contact"
-									onClick={() => navigate("/contact")}
-								>
+								<a onClick={() => navigate("/contact")}>
 									Contact
 								</a>
 							</li>
